@@ -74,6 +74,8 @@ else
 fi
 done
 popd >/dev/null
+stop
+
 ######### end for Misc: Scripts  ################
 
 ####################################################
@@ -105,6 +107,7 @@ make clean &>/dev/null
 
 echo -e "\nAll was done for ${STR}.\n"
 popd >/dev/null
+stop
 ############### End of Misc: Helper #################
 
 ################################
@@ -136,6 +139,7 @@ else
 	ok "Done"
     popd >/dev/null
 fi
+stop
 ################# End of Misc: Conf #################
 
 ### Build and Install the GNUstep app
@@ -150,6 +154,7 @@ subtitulo
 pushd . >/dev/null
 remove_ifx_app ${APPNAME}
 popd >/dev/null
+stop
 
 sleep 2
 clear
@@ -160,7 +165,7 @@ pushd . >/dev/null
 cd build/${REPO} || exit 1
 _build || exit 1
 popd >/dev/null
-
+stop
 #################################################
 ### Service
 clear
@@ -174,3 +179,4 @@ ok "Done"
 
 info "All was done for ${APPNAME} and its service ${SERVICE}."
 sleep 2
+stop
