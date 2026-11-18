@@ -92,7 +92,7 @@ cd build/${REPO} ||exit 1
 cd Helper || exit 1
 
 clear
-subtitlulo
+subtitulo
 
 printf "Building...\n"
 make clean &>/dev/null
