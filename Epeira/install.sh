@@ -23,7 +23,7 @@ fi
 
 SPIN='/-\|'
 FIND="YES"
-SCRIPTS=../../SCRIPTS
+SCRIPTS=../../../SCRIPTS
 
 if [ ! -d ${SCRIPTS} ];then
     echo -e "Bad path: main SCRIPTS folder was not found.\n"
